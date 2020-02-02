@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:kurika_app/core/error/exceptions.dart';
 import 'package:kurika_app/core/error/failures.dart';
-import 'package:kurika_app/core/plaform/network_info.dart';
+import 'package:kurika_app/core/network/network_info.dart';
 import 'package:kurika_app/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:kurika_app/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:kurika_app/features/number_trivia/data/models/number_trivia_model.dart';
