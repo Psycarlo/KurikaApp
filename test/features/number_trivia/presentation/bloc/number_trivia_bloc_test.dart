@@ -79,7 +79,7 @@ void main() {
         // assert
         final expected = [
           Empty(),
-          Error(message: INVALID_INPUT_FAILURE_MESSAGE)
+          const Error(message: INVALID_INPUT_FAILURE_MESSAGE)
         ];
         expectLater(
           bloc, 
@@ -157,7 +157,7 @@ void main() {
         final expected = [
           Empty(),
           Loading(),
-          Error(message: CACHE_FAILURE_MESSAGE),
+          const Error(message: CACHE_FAILURE_MESSAGE),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -233,7 +233,7 @@ void main() {
         final expected = [
           Empty(),
           Loading(),
-          Error(message: CACHE_FAILURE_MESSAGE),
+          const Error(message: CACHE_FAILURE_MESSAGE),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
