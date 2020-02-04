@@ -40,10 +40,8 @@ class NumberTriviaPage extends StatelessWidget {
                       message: state.message
                     );
                   }
-                  return Container(
-                    height: MediaQuery.of(context).size.height/3,
-                    child: const Placeholder()
-                  );
+                  // To avoid dart(missing_return)
+                  return const LoadingWidget();
                 }
               ),
               const SizedBox(height: 20),

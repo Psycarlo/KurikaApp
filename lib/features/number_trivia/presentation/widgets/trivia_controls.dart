@@ -56,12 +56,14 @@ class _TriviaControlsState extends State<TriviaControls> {
 
   void addConcrete() {
     controller.clear();
+    FocusScope.of(context).requestFocus(FocusNode());
     BlocProvider.of<NumberTriviaBloc>(context)
       .add(GetTriviaForConcreteNumber(inputStr));
   }
 
   void addRandom() {
     controller.clear();
+    FocusScope.of(context).requestFocus(FocusNode());
     BlocProvider.of<NumberTriviaBloc>(context)
       .add(GetTriviaForRandomNumber());
   }

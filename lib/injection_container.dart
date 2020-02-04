@@ -1,6 +1,5 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
-import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
@@ -17,63 +16,67 @@ import 'features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 final GetIt sl = GetIt.instance;
 
 Future<void> init() async {
-  initFeatures();
-  initCore();
-  await initExternal();
-}
-
-void initFeatures() {
+  //! Features - Number Trivia
   // Bloc
-  sl.registerFactory(() => NumberTriviaBloc(
-    concrete: sl() as GetConcreteNumberTrivia,
-    random: sl() as GetRandomNumberTrivia,
-    inputConverter: sl() as InputConverter
-  ));
+  sl.registerFactory(
+    () => NumberTriviaBloc(
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      concrete: sl(),
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      inputConverter: sl(),
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      random: sl(),
+    ),
+  );
 
   // Use cases
-  sl.registerLazySingleton(() => GetConcreteNumberTrivia(
-    sl() as NumberTriviaRepository
-  ));
-  sl.registerLazySingleton(() => GetRandomNumberTrivia(
-    sl() as NumberTriviaRepository
-  ));
+  sl.registerLazySingleton(
+    // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+    () => GetConcreteNumberTrivia(sl())
+  );
+  sl.registerLazySingleton(
+    // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+    () => GetRandomNumberTrivia(sl())
+  );
 
   // Repository
   sl.registerLazySingleton<NumberTriviaRepository>(
     () => NumberTriviaRepositoryImpl(
-      remoteDataSource: sl() as NumberTriviaRemoteDataSource,
-      localDataSource: sl() as NumberTriviaLocalDataSource, 
-      networkInfo: sl() as NetworkInfo
-    )
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      localDataSource: sl(),
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      networkInfo: sl(),
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      remoteDataSource: sl(),
+    ),
   );
 
   // Data sources
   sl.registerLazySingleton<NumberTriviaRemoteDataSource>(
     () => NumberTriviaRemoteDataSourceImpl(
-      client: sl() as Client
-    )
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      client: sl()
+    ),
   );
 
   sl.registerLazySingleton<NumberTriviaLocalDataSource>(
     () => NumberTriviaLocalDataSourceImpl(
-      sharedPreferences: sl() as SharedPreferences
-    )
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      sharedPreferences: sl()
+    ),
   );
 
-}
-
-void initCore() {
+  //! Core
   sl.registerLazySingleton(() => InputConverter());
   sl.registerLazySingleton<NetworkInfo>(
     () => NetworkInfoImpl(
-      sl() as DataConnectionChecker
+      // ignore: ARGUMENT_TYPE_NOT_ASSIGNABLE
+      sl()
     )
   );
-}
 
-Future<void> initExternal() async {
+  //! External
   final sharedPreferences = await SharedPreferences.getInstance();
-  
   sl.registerLazySingleton(() => sharedPreferences);
   sl.registerLazySingleton(() => http.Client());
   sl.registerLazySingleton(() => DataConnectionChecker());
