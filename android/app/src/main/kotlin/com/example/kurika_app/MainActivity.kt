@@ -1,4 +1,4 @@
-package com.example.kurika_app
+package com.psycarlo.kurika_app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
