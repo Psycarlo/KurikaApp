@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "739489965720",
+    "firebase_url": "https://kurikaapp-kurika.firebaseio.com",
+    "project_id": "kurikaapp-kurika",
+    "storage_bucket": "kurikaapp-kurika.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739489965720:android:24705cfb6e87485f2e52ed",
+        "android_client_info": {
+          "package_name": "com.psycarlo.kurika_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739489965720-mf3eiv10df7hefhhkct0jhdp1vfvm1uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDszw1uSMhTbOHk6FNeUz9USQby1KrogO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739489965720-mf3eiv10df7hefhhkct0jhdp1vfvm1uu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,6 +25,10 @@ dependencies:
   shared_preferences: ^0.5.6+1
   # Cupertino icons
   cupertino_icons: ^0.1.2
+  # Google's Firebase Products
+  firebase_auth: ^0.15.4
+  cloud_firestore: ^0.13.0+1
+  firebase_storage: ^3.1.1
 
 dev_dependencies:
   flutter_test:
