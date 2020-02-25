@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:  
+    sdk: flutter
+
   # Service locator
   get_it: ^3.1.0
   # State management
@@ -39,3 +42,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - lang/en.json
+    - lang/pt.json
