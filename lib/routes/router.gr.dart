@@ -7,12 +7,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
-import '../app/auth_widget.dart';
 
+import '../app/auth_widget.dart';
+import '../services/auth_service.dart';
+
+// ignore: avoid_classes_with_only_static_members
 class Router {
   static const authWidget = '/';
-  static const _guardedRoutes = const {};
-  static final navigator = ExtendedNavigator();
+  // static const _guardedRoutes = const {};
+  static final ExtendedNavigator navigator = ExtendedNavigator();
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
@@ -38,7 +41,7 @@ class Router {
 
 //AuthWidget arguments holder class
 class AuthWidgetArguments {
-  final Key key;
-  final AsyncSnapshot userSnapshot;
   AuthWidgetArguments({this.key, @required this.userSnapshot});
+  final Key key;
+  final AsyncSnapshot<User> userSnapshot;
 }
