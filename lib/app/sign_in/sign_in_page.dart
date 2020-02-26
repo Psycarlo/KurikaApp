@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 class SignInPageBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('SignIn'),
-      )
+    return MaterialApp(
+      title: 'SignInTest',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('SignIn'),
+        ),
+        body: const Center(
+          child: Text('Hello!'),
+        ),
+      ),
     );
   }
 }

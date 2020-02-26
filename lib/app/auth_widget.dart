@@ -19,7 +19,7 @@ class AuthWidget extends StatelessWidget {
     }
     return const Scaffold(
       body: Center(
-        child: Text('try'),
+        child: CircularProgressIndicator()
       )
     );
   }
