@@ -33,9 +33,7 @@ dev_dependencies:
   auto_route_generator: ^0.3.0
 
 flutter:
-
   uses-material-design: true
-
   assets:
-    - lang/en.json
-    - lang/pt.json
+    - lang/
+    - images/backgrounds/
