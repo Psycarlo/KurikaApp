@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
 
+// TODO: Transactions - Atomic
 class FirestoreService {
   FirestoreService._();
   static final FirestoreService instance = FirestoreService._();

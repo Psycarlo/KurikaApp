@@ -1,3 +1,7 @@
 {
-    "greetings": "Hi bastard"
+    "greetings": "Hi bastard",
+    "identifierLabel": "Email",
+    "passwordLabel": "Password",
+    "noAccountQuestion": "No acount?",
+    "noAccountAnswer": "Ask someone with power"
 }
