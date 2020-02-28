@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'app/auth_widget.dart';
@@ -8,12 +9,20 @@ import 'services/auth_service.dart';
 import 'services/firebase_auth_service.dart';
 import 'services/firestore_database.dart';
 
-void main() => runApp(
-  MyApp(
-    authServiceBuilder: (_) => FirebaseAuthService(),
-    databaseBuilder: (_, uid) => FirestoreDatabase(uid: uid)
-  )
-);
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((_) {
+    runApp(
+      MyApp(
+        authServiceBuilder: (_) => FirebaseAuthService(),
+        databaseBuilder: (_, uid) => FirestoreDatabase(uid: uid),
+      ),
+    );
+  });
+}
  
 class MyApp extends StatelessWidget {
   const MyApp({
