@@ -25,6 +25,8 @@ dependencies:
   firebase_storage: ^3.1.1
   # Device Preview
   device_preview: ^0.3.0+1
+  # Responsive Builder
+  responsive_builder: ^0.1.5
 
 dev_dependencies:
   flutter_test:

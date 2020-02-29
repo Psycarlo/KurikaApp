@@ -1,8 +1,8 @@
-import 'dart:async';
+// import 'dart:async';
 
 import 'package:meta/meta.dart';
-import 'firestore_service.dart';
-import 'firestore_path.dart';
+// import 'firestore_service.dart';
+// import 'firestore_path.dart';
 
 String documentIdFromCurrentData() => DateTime.now().toIso8601String();
 
@@ -13,7 +13,7 @@ class FirestoreDatabase {
 
   final String uid;
 
-  final _service = FirestoreService.instance;
+  // final _service = FirestoreService.instance;
 
   // TODO
   
