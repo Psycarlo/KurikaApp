@@ -9,6 +9,7 @@ TODO
 ## Resources
 
 - [Code With Andrea - Starter Architecture Flutter Firebase](https://github.com/bizz84/starter_architecture_flutter_firebase)
+- [Flutter Responsive UI - FilledStacks](https://www.youtube.com/watch?v=z7P1OFLw4kY)
 
 ## Credits
 
