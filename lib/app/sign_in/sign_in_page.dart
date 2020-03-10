@@ -33,20 +33,25 @@ class SignInPageUITemp extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height,
+              alignment: Alignment.center,
+              height: MediaQuery.of(context).size.height * 0.4,
               width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/backgrounds/guitar_white_op.png'),
-                  fit: BoxFit.cover,
-                ),  
-              ),
-              child: Stack(
-                children: const <Widget>[
-                  Text('Test'),
-                ],
-              ),
-            )
+              child: Text('K',
+                  style: TextStyle(color: Colors.orange, fontSize: 200)),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  backgroundColor: Colors.orange,
+                ),
+                Stack(
+                  children: const <Widget>[
+                    Text('Relatos de Taberna'),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
