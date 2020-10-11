@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://i.imgur.com/qeYbVo6.png" alt="Kurika" width="420">
+  <img src="https://i.imgur.com/qeYbVo6.png" alt="Kurika" width="180">
   <br>
   Mobile application for groups of friends
   <br>
