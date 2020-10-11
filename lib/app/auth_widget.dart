@@ -15,7 +15,7 @@ class AuthWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (userSnapshot.connectionState == ConnectionState.active) {
-      return userSnapshot.hasData ? HomePage() : SignInPageUITemp();
+      return userSnapshot.hasData ? HomePage() : SignInPage();
     }
     return const Scaffold(
       body: Center(

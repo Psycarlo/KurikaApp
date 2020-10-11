@@ -1,6 +1,17 @@
-# Kurika App
+<h1 align="center">
+  <img src="https://i.imgur.com/qeYbVo6.png" alt="Kurika" width="420">
+  <br>
+  Mobile application for groups of friends
+  <br>
+  <br>
+</h1>
 
-TODO
+<p align="center">
+  <img src="https://api.codemagic.io/apps/5f826c929ccdabe3fd51e48a/5f826c929ccdabe3fd51e489/status_badge.svg" alt="codemagic">
+  <br>
+  <br>
+  Made with :heart: by Psycarlo
+</p>
 
 ## Getting Started
 
@@ -12,6 +23,8 @@ TODO
 - [Flutter Responsive UI - FilledStacks](https://www.youtube.com/watch?v=z7P1OFLw4kY)
 
 ## Credits
+
+TODO
 
 ### Images/Backgrounds
 
